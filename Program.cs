@@ -50,7 +50,7 @@ namespace C_Sharp_a1
                         cond.Par();
                         break;
                     case 0:
-                        Console.WriteLine("Obrigado!");
+                        Console.WriteLine("Obrigado!!!");
 
                         break;
                 }
