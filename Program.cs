@@ -8,6 +8,9 @@ namespace C_Sharp_a1
     {
         static void Main(string[] args)
         {
+
+            bool a = true | false;
+
             Apresentacao ap1 = new Apresentacao();
             Calculadora calculadora1 = new Calculadora();
             ap1.Saudacao("Vivi");
