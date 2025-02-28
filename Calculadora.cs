@@ -61,5 +61,38 @@ namespace C_Sharp_a1
             resultado = n1 + n2;
             Console.WriteLine("O resultado da soma é: " + resultado);
         }
+
+        public void Subtrair()
+        {
+            int n1, n2, resultado;
+            Console.WriteLine("Você escolheu subtrair! \nDigite o primeiro número");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Digite o segundo número");
+            n2 = Convert.ToInt32(Console.ReadLine());
+            resultado = n1 - n2;
+            Console.WriteLine("O resultado da soma é: " + resultado);
+        }
+
+        public void Multiplicar()
+        {
+            int n1, n2, resultado;
+            Console.WriteLine("Você escolheu multiplicar! \nDigite o primeiro número");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Digite o segundo número");
+            n2 = Convert.ToInt32(Console.ReadLine());
+            resultado = n1 * n2;
+            Console.WriteLine("O resultado da soma é: " + resultado);
+        }
+
+        public void Dividir()
+        {
+            int n1, n2, resultado;
+            Console.WriteLine("Você escolheu Dividir! \nDigite o primeiro número");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Digite o segundo número");
+            n2 = Convert.ToInt32(Console.ReadLine());
+            resultado = n1 / n2;
+            Console.WriteLine("O resultado da soma é: " + resultado);
+        }
     }
 }
