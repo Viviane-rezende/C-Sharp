@@ -9,55 +9,67 @@ namespace C_Sharp_a1
     {
         static void Main(string[] args)
         {
-       
-            Apresentacao ap = new Apresentacao();
 
+            Condicionais condicionais = new Condicionais();
 
-        Calculadora calculadora1 = new Calculadora();
-        
-        Condicionais cond = new Condicionais();
-       
+          
 
-
-            String menu = "Digite o número referente a operação que deseja executar:\n\n1 para soma\n2 para subtração\n3 para multiplicação \n4 divisão \n5 para saber se é par ou ímpar \n0 para sair";
-            int op = 0;
+            int op = 10;
             do
             {
-                Console.WriteLine("▒▒▒░░░░░░░░░░▄▐░░░░\r\n▒░░░░░░▄▄▄░░▄██▄░░░\r\n░░░░░░▐▀█▀▌░░░░▀█▄░\r\n░░░░░░▐█▄█▌░░░░░░▀█▄\r\n░░░░░░░▀▄▀░░░▄▄▄▄▄▀▀\r\n░░░░░▄▄▄██▀▀▀▀░░░░░\r\n░░░░█▀▄▄▄█░▀▀░░░░░░\r\n░░░░▌░▄▄▄▐▌▀▀▀░░░░░\r\n░▄░▐░░░▄▄░█░▀▀░░░░░\r\n░▀█▌░░░▄░▀█▀░▀░░░░░\r\n░░░░░░░░▄▄▐▌▄▄░░░░░\r\n░░░░░░░░▀███▀█░▄░░░\r\n░░░░░░░▐▌▀▄▀▄▀▐▄░░░\r\n░░░░░░░▐▀░░░░░░▐▌░░\r\n░░░░░░░█░░░░░░░░█░░\r\n░░░░░░▐▌░░░░░░░░░█░");
-                    Console.WriteLine(menu);
+                Console.WriteLine("\n\n──────▄▀▄─────▄▀▄\r\n─────▄█░░▀▀▀▀▀░░█▄\r\n─▄▄──█░░░░░░░░░░░█──▄▄\r\n█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█\n\nSelecione o exercício: \n1 - Verificar se número é maior ou menor que 100 \n2 - Porcentagem Votos \n3 - Número maior ou menor que o parâmetro \n4 - Qual o maior número \n5 - Qual o menor número \n6 - Soma \n7 - Intervalo entre parâmetros \n8 - Par ou ímpar \n9 - Média \n0 - Sair");   
                 op = Convert.ToInt32(Console.ReadLine());
+
+
+
                 switch (op)
                 {
-
                     case 1:
-
-                        calculadora1.Somar();
+                        condicionais.MenorOuMaiorQue100();
                         break;
+
                     case 2:
+                        condicionais.Eleitores();
+                        break;  
 
-                        calculadora1.Subtrair();
-                        break;
                     case 3:
-
-                        calculadora1.Multiplicar();
+                        condicionais.MaiorOuMenorAnterior(5);
                         break;
+
                     case 4:
-
-                        calculadora1.Dividir();
+                        condicionais.MaiorNumero();
                         break;
+
                     case 5:
-
-                        cond.Par();
+                        condicionais.MenorNumero();
                         break;
+
+                    case 6:
+                        condicionais.Soma3Valores();
+                        break; 
+
+                    case 7:
+                        condicionais.ValorIntervalo(25, 50);
+                        break;
+
+                    case 8:
+                        condicionais.ParOuImpar(7);
+                        break;
+
+                    case 9:
+                        condicionais.Notas();
+                        break;
+
                     case 0:
-                        Console.WriteLine("Obrigado!!!");
-
+                        Console.WriteLine("Obrigado!\n\n");
                         break;
+
+
                 }
-            } while (op != 0) ;
 
 
 
+            } while (op != 0);
 
 
 
@@ -72,25 +84,87 @@ namespace C_Sharp_a1
 
 
 
+/*  Apresentacao ap = new Apresentacao();
+
+
+Calculadora calculadora1 = new Calculadora();
+
+Condicionais cond = new Condicionais();
+
+
+
+  String menu = "Digite o número referente a operação que deseja executar:\n\n1 para soma\n2 para subtração\n3 para multiplicação \n4 divisão \n5 para saber se é par ou ímpar \n0 para sair";
+  int op = 0;
+  do
+  {
+      Console.WriteLine("▒▒▒░░░░░░░░░░▄▐░░░░\r\n▒░░░░░░▄▄▄░░▄██▄░░░\r\n░░░░░░▐▀█▀▌░░░░▀█▄░\r\n░░░░░░▐█▄█▌░░░░░░▀█▄\r\n░░░░░░░▀▄▀░░░▄▄▄▄▄▀▀\r\n░░░░░▄▄▄██▀▀▀▀░░░░░\r\n░░░░█▀▄▄▄█░▀▀░░░░░░\r\n░░░░▌░▄▄▄▐▌▀▀▀░░░░░\r\n░▄░▐░░░▄▄░█░▀▀░░░░░\r\n░▀█▌░░░▄░▀█▀░▀░░░░░\r\n░░░░░░░░▄▄▐▌▄▄░░░░░\r\n░░░░░░░░▀███▀█░▄░░░\r\n░░░░░░░▐▌▀▄▀▄▀▐▄░░░\r\n░░░░░░░▐▀░░░░░░▐▌░░\r\n░░░░░░░█░░░░░░░░█░░\r\n░░░░░░▐▌░░░░░░░░░█░");
+          Console.WriteLine(menu);
+      op = Convert.ToInt32(Console.ReadLine());
+      switch (op)
+      {
+
+          case 1:
+
+              calculadora1.Somar();
+              break;
+          case 2:
+
+              calculadora1.Subtrair();
+              break;
+          case 3:
+
+              calculadora1.Multiplicar();
+              break;
+          case 4:
+
+              calculadora1.Dividir();
+              break;
+          case 5:
+
+              cond.Par();
+              break;
+          case 0:
+              Console.WriteLine("Obrigado!!!");
+
+              break;
+      }
+  } while (op != 0) ;
 
 
 
 
-/*
- *      Apresentacao ap1 = new Apresentacao();
-            Calculadora calculadora1 = new Calculadora();
-            ap1.Saudacao("Vivi");
-            //calculadora1.Soma();
-            calculadora1.FuncaoSoma(10, 02);
-            calculadora1.FuncaoSub(20, 10);
-            calculadora1.FuncaoMult(7, 7);
-            calculadora1.FuncaoDivisao(25, 25);
-            calculadora1.CalculaAreaRetangulo(20, 10);
 
- * 
- * public void Saudacao(String nome)
+
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+*      Apresentacao ap1 = new Apresentacao();
+  Calculadora calculadora1 = new Calculadora();
+  ap1.Saudacao("Vivi");
+  //calculadora1.Soma();
+  calculadora1.FuncaoSoma(10, 02);
+  calculadora1.FuncaoSub(20, 10);
+  calculadora1.FuncaoMult(7, 7);
+  calculadora1.FuncaoDivisao(25, 25);
+  calculadora1.CalculaAreaRetangulo(20, 10);
+
+* 
+* public void Saudacao(String nome)
 {
-    Console.WriteLine("Hello World! " + nome);
+Console.WriteLine("Hello World! " + nome);
 }
 
 float n1, n2, soma;
@@ -102,7 +176,7 @@ DateTime dataHoje = DateTime.Now;
 
 Using 'WriteLine' to break lines
 
- Console.WriteLine("Viviane Rezende Silva");
+Console.WriteLine("Viviane Rezende Silva");
 Console.WriteLine("29");
 Console.WriteLine("25/02/2025");
 
@@ -118,8 +192,8 @@ nome = Console.ReadLine();                      //readline only read Strings
 Console.WriteLine("Qual a sua idade?");
 //idade= Int32.Parse(Console.ReadLine());
 idade = Convert.ToInt32(Console.ReadLine());    //here we are using the function Convert to convert Int to String and read it
-                                                //idade = Int32.Parse(null);                    
-                                                //idade = Convert.ToInt32(null);
+                                      //idade = Int32.Parse(null);                    
+                                      //idade = Convert.ToInt32(null);
 
 Console.WriteLine("A data de hoje é: " + dataHoje.ToString
 ("dd/MM/yyyy"));
