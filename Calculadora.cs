@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using C_Sharp;
@@ -112,10 +113,24 @@ namespace C_Sharp_a1
             Console.WriteLine("O resultado da soma é: " + resultado);
         }
 
-       public void menuCalculadora()
+        public void Tabuada()
+        {
+            int n1, n2;
+            Console.WriteLine("\nDigite o número que deseja fazer a tabuada: ");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"\nVocê escolheu fazer a tabuada do {n1}\n");
+
+            for (n2 = 0; n2 <= 10; n2++)
+            {
+                Console.WriteLine($"{n1} X {n2} = {n1 * n2}");
+            }
+            Console.WriteLine();
+        }
+
+        public void menuCalculadora()
         {
             Calculadora calculadora1 = new Calculadora();
-            String menu = "Digite o número referente a operação que deseja executar:\n\n1 para soma\n2 para subtração\n3 para multiplicação \n4 divisão \n5 para saber se é par ou ímpar \n0 para sair";
+            String menu = "Digite o número referente a operação que deseja executar:\n\n1 para soma\n2 para subtração\n3 para multiplicação \n4 divisão \n5 para saber se é par ou ímpar \n6 para tabuada \n0 para sair";
             int op = 0;
             do
             {
@@ -145,9 +160,15 @@ namespace C_Sharp_a1
 
                         calculadora1.Par();
                         break;
+                    case 6:
+                        calculadora1.Tabuada();
+                        break;
                     case 0:
                         Console.WriteLine("Obrigado!!!");
 
+                        break;
+                    default:
+                        Console.WriteLine("Por favor, digite um número válido");
                         break;
                 }
             } while (op != 0);
@@ -157,8 +178,7 @@ namespace C_Sharp_a1
 
 
 
-        
-    }
+
+        }
     }
 }
- 

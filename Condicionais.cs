@@ -261,6 +261,9 @@ namespace C_Sharp
                     case 0:
                         Console.WriteLine("Obrigado!\n\n");
                         break;
+                    default:
+                        Console.WriteLine("Digite uma opção válida");
+                        break;
 
 
 

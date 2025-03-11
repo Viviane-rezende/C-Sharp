@@ -9,8 +9,8 @@ namespace C_Sharp_a1
     {
         static void Main(string[] args)
         {
-            Condicionais cond = new Condicionais();
-            Calculadora calculadora = new Calculadora();
+            Condicionais condicionais = new Condicionais();
+            Calculadora calculadora1 = new Calculadora();
             int op;
 
             do
@@ -22,13 +22,16 @@ namespace C_Sharp_a1
                 switch (op)
                 {
                     case 1:
-                        cond.menuCondicionais();
+                        condicionais.menuCondicionais();
                         break;
                     case 2:
-                        calculadora.menuCalculadora();
+                        calculadora1.menuCalculadora();
                         break;
                     case 0:
                         Console.WriteLine("Muito obrigado!");
+                        break;
+                    default:
+                        Console.WriteLine("Digite uma opção valida");
                         break;
 
                 }
