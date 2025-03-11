@@ -11,6 +11,8 @@ namespace C_Sharp_a1
         {
 
             Condicionais condicionais = new Condicionais();
+            Calculadora calculadora = new Calculadora();
+            calculadora.tabuada();
 
           
 

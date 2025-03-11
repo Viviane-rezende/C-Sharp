@@ -10,6 +10,21 @@ namespace C_Sharp_a1
     {
 
 
+        public void tabuada()
+        {
+            int valor1, valor2;
+
+            for (valor1 = 0; valor1 <= 10; valor1++)
+            {
+                Console.WriteLine("");
+                for (valor2 = 0; valor2 < 10; valor2++)
+                    Console.Write(valor1 + " * " + valor2 + " = " + valor1 * valor2 + "\t");
+                //Console.Write($"{valor1} X {valor2} = {valor1*valor2}\t");
+
+            }
+        }
+
+
         public void FuncaoSoma(int n1, int n2)
         {
             int resultado;
