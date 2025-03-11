@@ -14,28 +14,10 @@ namespace C_Sharp
 
         public void Teste()
         {
-            Console.WriteLine("HELLO CONDICIONAISSSS");
+            Console.WriteLine("Hello, Condicionais!");
         }
 
-        public void Par()
-        {
-            int num;
-            Console.WriteLine("Digite um número");
-            num = Convert.ToInt32(Console.ReadLine());
-
-
-            if (num % 2 == 0)
-            {
-                Console.WriteLine("Número par!");
-            }
-            else
-            {
-                Console.WriteLine("Número ímpar");
-            }
-        }
-
-
-
+    
         // Exercícios 1
 
         public void MenorOuMaiorQue100()
@@ -65,17 +47,16 @@ namespace C_Sharp
         {
             int eleitores, votosBrancos, votosNulos, votosValidos;
             Console.WriteLine("Exercício 2 \n\n");
-            Console.WriteLine("Digite o número de eleitores:");
-            eleitores = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Digite o número de votos brancos");
+            Console.WriteLine("Digite o número de votos brancos:");
             votosBrancos = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Digite o número de votos nulos");
             votosNulos = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Digite o número de votos válidos");
             votosValidos = Convert.ToInt32(Console.ReadLine());
+            eleitores = votosBrancos + votosNulos + votosValidos;
             Console.WriteLine("A porcentagem de votos brancos é de: " + (votosBrancos * 100) / eleitores + "%");
             Console.WriteLine("A porcentagem de votos nulos é de: " + (votosNulos * 100) / eleitores + "%");
-            Console.WriteLine("A porcentagem de votos válidos é de: " + (votosValidos * 100) / eleitores);
+            Console.WriteLine("A porcentagem de votos válidos é de: " + (votosValidos * 100) / eleitores + "%");
         }
 
         //Exercício 3
@@ -203,8 +184,9 @@ namespace C_Sharp
         }
 
         // Exercício 9 
-        public void Notas() {
-        float nota1, nota2, nota3, nota4, media;
+        public void Notas()
+        {
+            float nota1, nota2, nota3, nota4, media;
             Console.WriteLine("Digite a nota 1");
             nota1 = float.Parse(Console.ReadLine());
             Console.WriteLine("Digite a nota 2");
@@ -213,12 +195,13 @@ namespace C_Sharp
             nota3 = float.Parse(Console.ReadLine());
             Console.WriteLine("Digite a nota 4");
             nota4 = float.Parse(Console.ReadLine());
-            media = (nota1 + nota2 + nota3 +  nota4) / 4 ;
-            Console.WriteLine("A média é: "+ media);
+            media = (nota1 + nota2 + nota3 + nota4) / 4;
+            Console.WriteLine("A média é: " + media);
             if (media >= 7.5)
             {
                 Console.WriteLine("Aprovado");
-            } else
+            }
+            else
             {
                 Console.WriteLine("Reprovado");
             }
@@ -226,9 +209,74 @@ namespace C_Sharp
 
         // Exercício 10 Menu
 
-      
+        public void menuCondicionais()
+        {
+            Condicionais condicionais = new Condicionais();
+            int op = 10;
+            do
+            {
+                Console.WriteLine("\n\n──────▄▀▄─────▄▀▄\r\n─────▄█░░▀▀▀▀▀░░█▄\r\n─▄▄──█░░░░░░░░░░░█──▄▄\r\n█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█\n\nSelecione o exercício: \n1 - Verificar se número é maior ou menor que 100 \n2 - Porcentagem Votos \n3 - Número maior ou menor que o parâmetro \n4 - Qual o maior número \n5 - Qual o menor número \n6 - Soma \n7 - Intervalo entre parâmetros \n8 - Par ou ímpar \n9 - Média \n0 - Sair");
+                op = Convert.ToInt32(Console.ReadLine());
 
-    
+
+
+                switch (op)
+                {
+                    case 1:
+                        condicionais.MenorOuMaiorQue100();
+                        break;
+
+                    case 2:
+                        condicionais.Eleitores();
+                        break;
+
+                    case 3:
+                        condicionais.MaiorOuMenorAnterior(5);
+                        break;
+
+                    case 4:
+                        condicionais.MaiorNumero();
+                        break;
+
+                    case 5:
+                        condicionais.MenorNumero();
+                        break;
+
+                    case 6:
+                        condicionais.Soma3Valores();
+                        break;
+
+                    case 7:
+                        condicionais.ValorIntervalo(25, 50);
+                        break;
+
+                    case 8:
+                        condicionais.ParOuImpar(7);
+                        break;
+
+                    case 9:
+                        condicionais.Notas();
+                        break;
+
+                    case 0:
+                        Console.WriteLine("Obrigado!\n\n");
+                        break;
+                    default:
+                        Console.WriteLine("Digite uma opção válida");
+                        break;
+
+
+
+                }
+
+
+
+            } while (op != 0);
+
+
+
+        }
+
 
     }
 
