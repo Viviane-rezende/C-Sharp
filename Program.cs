@@ -12,7 +12,11 @@ namespace C_Sharp_a1
 
             Condicionais condicionais = new Condicionais();
             Calculadora calculadora = new Calculadora();
-            calculadora.tabuada();
+            //calculadora.Ternario();
+            //calculadora.Tabuada();
+            //calculadora.ListaCarros();
+            calculadora.ListaCoresPercorridaComForEach();
+            calculadora.Roupas();
 
           
 

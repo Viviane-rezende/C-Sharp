@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,8 +10,52 @@ namespace C_Sharp_a1
     internal class Calculadora
     {
 
+        public void ListaCarros()
+        {
+            string[] carros = { "BMW", "JEEP", "VOLVO"                  //declaracao de array com 3 valores indice 2
+            };
+            Console.WriteLine(carros[0]);
 
-        public void tabuada()
+            Console.WriteLine(carros.Length);
+
+            for (int i = 0; i <= carros.Length; i++)
+            {
+                Console.WriteLine(carros[i]);                           //printando todos os valores do array percorrendo ele com for 
+            }
+        }
+
+
+        public void ListaCoresPercorridaComForEach()
+        {
+            string[] cores = { "azul", "amarelo", "vermelho", "rosa", "preto" };        //foreach é focado em percorrer arrays
+            foreach (string item in cores)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+
+        public void Roupas() {
+            string[] roupas = new string[3];            //aqui estou criando um array com indice 2
+            for (int i=0; i <roupas.Length; i++)
+            {
+                Console.WriteLine("Digite a roupa:");
+                roupas[i] = Console.ReadLine();
+
+            }
+
+            foreach (string item in roupas)
+            {
+                Console.WriteLine(roupas.Length);
+                
+            }
+            
+         
+        }
+
+
+
+        public void Tabuada()
         {
             int valor1, valor2;
 
@@ -24,7 +69,12 @@ namespace C_Sharp_a1
             }
         }
 
+        public void Ternario()
+        {
+            int num = 10;
+            Console.WriteLine((num == 10) ? "Número igual a  10, verdadeiro" : "Número diferente de 10, falso. ");
 
+        }
         public void FuncaoSoma(int n1, int n2)
         {
             int resultado;
